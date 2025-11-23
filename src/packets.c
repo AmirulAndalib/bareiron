@@ -1049,8 +1049,8 @@ int sc_respawn (int client_fd) {
   writeVarInt(client_fd, 28);
   writeByte(client_fd, 0x4B);
 
-  // dimension id
-  writeVarInt(client_fd, 1);
+  // dimension id (from server-sent registries)
+  writeVarInt(client_fd, 0);
   // dimension name
   const char *dimension = "overworld";
   writeVarInt(client_fd, 9);
