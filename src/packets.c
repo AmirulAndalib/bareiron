@@ -212,8 +212,9 @@ int sc_loginPlay (int client_fd) {
   writeByte(client_fd, true);
   // limited crafting
   writeByte(client_fd, false);
-  // dimension id
-  writeVarInt(client_fd, 1);
+  // dimension id (from server-sent registries)
+  // the server only sends "overworld"
+  writeVarInt(client_fd, 0);
   // dimension name
   writeVarInt(client_fd, 9);
   send_all(client_fd, dimension, 9);
