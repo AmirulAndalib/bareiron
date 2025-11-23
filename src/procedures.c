@@ -638,7 +638,7 @@ uint8_t makeBlockChange (short x, uint8_t y, short z, uint8_t block) {
 }
 
 // Returns the result of mining a block, taking into account the block type and tools
-// Probability numbers obtained with this formula: N = floor(P * 32 ^ 2)
+// Probability numbers obtained with this formula: N = floor(P * (2 ^ 32))
 uint16_t getMiningResult (uint16_t held_item, uint8_t block) {
 
   switch (block) {
